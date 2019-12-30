@@ -4,13 +4,13 @@ public class ArchiveInput {
 
 
     public String source;
-    public String archiveTo;
+    public String destination;
 
     public ArchiveInput() {}
 
-    public ArchiveInput(String source, String archiveTo) {
+    public ArchiveInput(String source, String destination) {
         this.source = source;
-        this.archiveTo = archiveTo;
+        this.destination = destination;
     }
 
     public String getSource() {
@@ -21,11 +21,11 @@ public class ArchiveInput {
         this.source = source;
     }
 
-    public String getArchiveTo() {
-        return archiveTo;
+    public String getDestination() {
+        return destination;
     }
 
-    public void setArchiveTo(String archiveTo) {
-        this.archiveTo = archiveTo;
+    public void setDestination(String destination) {
+        this.destination = destination;
     }
 }

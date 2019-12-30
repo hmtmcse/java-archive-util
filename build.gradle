@@ -12,7 +12,9 @@ repositories {
 
 
 
-def dependencyList = []
+def dependencyList = [
+        "java-file-util"
+]
 
 
 dependencies {
