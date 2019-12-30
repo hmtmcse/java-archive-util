@@ -12,4 +12,18 @@ class ArchiveTest extends Specification{
         archiveManager.tarExtract()
     }
 
+    def "Create zip Archive"(){
+        expect: "Will create zip Archive"
+        ArchiveManager archiveManager = new ArchiveManager()
+        archiveManager.setInputOutput("C:\\Users\\touhid\\Desktop\\tmp\\vaia\\xyz", "C:\\Users\\touhid\\Desktop\\tmp\\vaia\\xyz.zip")
+        archiveManager.zip()
+    }
+
+    def "Extract zip Archive"(){
+        expect: "Will extract zip Archive"
+        ArchiveManager archiveManager = new ArchiveManager()
+        archiveManager.setInputOutput("C:\\Users\\touhid\\Desktop\\tmp\\vaia\\xyz.zip", "C:\\Users\\touhid\\Desktop\\tmp\\vaia\\baka")
+        archiveManager.zipExtract()
+    }
+
 }
