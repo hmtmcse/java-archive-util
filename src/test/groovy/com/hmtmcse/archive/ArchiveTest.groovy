@@ -1,6 +1,5 @@
 package com.hmtmcse.archive
 
-import com.hmtmcse.archive.common.ArchiveProcessor
 import spock.lang.Specification
 
 class ArchiveTest extends Specification{
