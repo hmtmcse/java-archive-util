@@ -25,4 +25,21 @@ class ArchiveTest extends Specification{
         archiveManager.zipExtract()
     }
 
+    def "Extract multiple zip Archive"(){
+        expect: "Will extract zip Archive"
+        ArchiveManager archiveManager = new ArchiveManager()
+        archiveManager.setInputOutput("C:\\Users\\touhid\\Desktop\\tmp\\binary\\binary.zip", "C:\\Users\\touhid\\Desktop\\tmp\\binary\\extract")
+        archiveManager.zipExtract()
+
+        archiveManager.setInputOutput("C:\\Users\\touhid\\Desktop\\tmp\\binary\\extract\\app_4_0_0.zip", "C:\\Users\\touhid\\Desktop\\tmp\\binary\\extract")
+        archiveManager.zipExtract()
+    }
+
+    def "Archive multiple zip Archive"() {
+        expect: "Will extract zip Archive"
+        ArchiveManager archiveManager = new ArchiveManager()
+        archiveManager.setInputOutput("C:\\Users\\touhid\\Desktop\\tmp\\binary\\extract", "C:\\Users\\touhid\\Desktop\\tmp\\binary\\binary.zip",)
+        archiveManager.zip()
+    }
+
 }
